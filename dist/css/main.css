@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "Circe-Bold";
+  src: url('../fonts/Circe-Bold.ttf');
+}
+@font-face {
+  font-family: "Circe";
+  src: url('../fonts/Circe-Light.ttf');
+}
+@font-face {
+  font-family: "Futura-Book-C";
+  src: url('../fonts/FuturaBookC.ttf');
+}
+@font-face {
+  font-family: "Circe-Regular";
+  src: url('../fonts/Circe-Regular.ttf');
+}
+body {
+  background-color: black;
+}
+h1 {
+  margin-top: 5%;
+  font-size: 40px;
+  line-height: 48px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+li {
+  list-style: none;
+}
+#container {
+  font-family: Circe;
+  min-width: 1200px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+#container > div {
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+#block-main {
+  min-height: 100vh;
+  background: url('../img/block-main-bg.png') no-repeat top;
+  -webkit-background-size: cover;
+          background-size: cover;
+  color: #ddddde;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#block-main-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+#block-main-top #logo {
+  margin-top: 45px;
+  font-family: "Futura-Book-C";
+  font-size: 30px;
+}
+#block-main-top #logo::before {
+  margin: -25px 10px;
+  content: '';
+  height: 83px;
+  width: 73px;
+  float: left;
+  background: url('../img/logo.png') no-repeat top;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+#block-main-top a {
+  margin: 57px 20px;
+  font-size: 18px;
+  opacity: 0.7;
+}
+#block-main-top a:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.contact {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 35px;
+  white-space: nowrap;
+}
+.contact::before {
+  content: '';
+  margin: 3px;
+  height: 25px;
+  width: 25px;
+  float: left;
+  background: url('../img/telephone.png') no-repeat top;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+#block-main-description h1 {
+  margin-top: -5%;
+}
+#block-main-description h3 {
+  font-size: 24px;
+  line-height: 20px;
+}
+#block-main-description span {
+  color: #ffda44;
+}
+#arrow {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  margin-bottom: 2%;
+}
+.owl-carousel .owl-item img {
+  margin-bottom: 16.5%;
+}
+#block-price {
+  height: 1200px;
+}
+#block-price ul {
+  padding-left: 1%;
+  width: 80%;
+  height: 88px;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+#block-price ul:nth-child(odd) {
+  background-color: #e8e8e8;
+}
+#block-price li {
+  width: 18%;
+  font-size: 24px;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#block-price ul > li:first-child {
+  width: 60%;
+  text-align: left;
+  padding-right: 5%;
+}
+#block-price ul:last-child > li:first-child {
+  padding-right: 0;
+}
+#block-price h3 {
+  height: 88px;
+  font-size: 30px;
+  font-family: "Circe-Bold";
+  padding-top: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#block-price span {
+  font-weight: 400;
+  font-family: "Circe-Regular";
+}
+#block-price .space {
+  width: 4%;
+}
+#block-price .orange {
+  border-bottom: 5px solid #ffda44;
+}
+#block-price .green {
+  border-bottom: 5px solid #52ac62;
+}
+#block-price .blue {
+  border-bottom: 5px solid #4d59a1;
+}
+#block-order {
+  background: url('../img/block-order-bg.jpg') no-repeat top;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+form {
+  height: 670px;
+  width: 500px;
+  margin: 100px auto;
+  background-color: white;
+}
+form h1 {
+  margin: 80px 0 0 0;
+  font-size: 36px;
+}
+form p {
+  margin: 0 0 30px 0;
+  font-size: 18px;
+  color: #727272;
+}
+form input {
+  font-size: 24px;
+  color: #272727;
+  height: 80px;
+  width: 350px;
+  padding-left: 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid white;
+  border-bottom: 1px solid black;
+}
+form input[name="name"] {
+  background: url('../img/avatar.png') no-repeat 20px;
+}
+form input[name="phone"] {
+  background: url('../img/phone-call.png') no-repeat 20px;
+}
+form input[name="email"] {
+  background: url('../img/envelope.png') no-repeat 20px;
+}
+form #submit {
+  height: 80px;
+  padding-left: 0;
+  margin-top: 80px;
+  color: white;
+  background-color: #ffda44;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 700;
+  border-bottom: 1px solid #ffda44;
+}
+form #submit:hover {
+  -webkit-box-shadow: 3px 4px 10px grey;
+          box-shadow: 3px 4px 10px grey;
+}
+#block-contact {
+  padding: 3%;
+  font-size: 24px;
+}
+#block-contact #email {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+#block-contact #email::before {
+  content: '';
+  height: 28px;
+  width: 36px;
+  margin: 14px 7px 0 0;
+  float: left;
+  background: url('../img/email.png') no-repeat top;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+#block-contact .contact {
+  font-size: 40px;
+}
+#block-contact .contact::before {
+  margin-top: 5px;
+  height: 36px;
+  width: 36px;
+}
+@media only screen and (orientation: portrait) {
+  #arrow {
+    margin-bottom: 5%;
+  }
+  #block-price h3 {
+    font-size: 1em;
+  }
+}
