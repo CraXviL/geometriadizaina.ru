@@ -12,25 +12,29 @@
 </head>
 <body>
 	<div id="container">
-		<div id="block-main">
+		<section id="block-main">
 			<div id="block-main-top">
-				<div id="logo">ГеометрияДизайна</div>
-				<ul>
+				<div id="logo">Геометрия<br>Дизайна</div>
+				<nav>
 					<a id="menu-portfolio">ПОРТФОЛИО</a>
 					<a id="menu-price">ЦЕНЫ</a>
 					<a id="menu-contact">КОНТАКТЫ</a>
-				</ul>
+				</nav>
 				<div class="contact">8 921 979-34-25</div>
 			</div>
 			<div id="block-main-description">
-				<h1>Мы — творческое объединение <span>дизайнеров интерьера</span><br> домов, квартир, общественных помещений.</h1>
+				<h1>Творческое объединение <span>дизайнеров интерьера</span><br> домов, квартир, общественных помещений.</h1>
 				<h3>Работаем в городе <span>Санкт-Петербург</span> и <span>Ленинградской области.</span></h3>
 			</div>
 			<img id="arrow" src="img/arrow.png">
-		</div>
-		<div id="block-portfolio">
-			<h1>Наши работы</h1>
-			<ul class="popup-gallery owl-carousel ">
+		</section>
+		<section id="block-portfolio">
+			<h1>ПОРТФОЛИО</h1>
+			<div>
+				<a id="oldGalleryButton" class="active">Новые работы</a>
+				<a id="newGalleryButton">Прошлые работы</a>
+			</div>
+			<ul id="newGallery" class="popup-gallery owl-carousel ">
 				<li>
 					<a href="img/gallery/1.jpg"><img src="img/gallery/1.jpg"></a>
 					<a href="img/gallery/2.jpg"><img src="img/gallery/2.jpg"></a>
@@ -97,11 +101,15 @@
 					<a href="img/gallery/39.jpg"><img class="hidden" src="img/gallery/39.jpg"></a>
 				</li><li>	
 					<a href="img/gallery/40.jpg"><img class="hidden" src="img/gallery/40.jpg"></a>
-				</li><li>	
+				</li><li>
 					<a href="img/gallery/42.jpg"><img class="hidden" src="img/gallery/42.jpg"></a>
-<!-- 					<a href="img/gallery/43.jpg"><img class="hidden" src="img/gallery/43.jpg"></a>
-				</li><li> -->
-<!-- 					<a href="img/gallery/44.jpg"><img class="hidden" src="img/gallery/44.jpg"></a>
+				</li>
+			</ul>
+			<ul id="oldGallery" class="hidden">
+				<li>
+					<a href="img/gallery/43.jpg"><img class="hidden" src="img/gallery/43.jpg"></a>
+				</li><li>
+					<a href="img/gallery/44.jpg"><img class="hidden" src="img/gallery/44.jpg"></a>
 					<a href="img/gallery/45.jpg"><img class="hidden" src="img/gallery/45.jpg"></a>
 				</li><li>
 					<a href="img/gallery/46.jpg"><img class="hidden" src="img/gallery/46.jpg"></a>
@@ -120,10 +128,11 @@
 					<a href="img/gallery/54.jpg"><img class="hidden" src="img/gallery/54.jpg"></a>
 					<a href="img/gallery/56.jpg"><img class="hidden" src="img/gallery/56.jpg"></a>
 				</li><li>
-					<a href="img/gallery/55.jpg"><img class="hidden" src="img/gallery/55.jpg"></a> -->
+					<a href="img/gallery/55.jpg"><img class="hidden" src="img/gallery/55.jpg"></a>
+				</li>
 			</ul>
-		</div>
-		<div id="block-price">
+		</section>
+		<section id="block-price">
 			<h1>Наши расценки</h1>
 				<ul>
 					<li></li>
@@ -176,8 +185,8 @@
 					<li class="space"></li>
 					<li><h3 class="blue">2500 р.</h3></li>
 				</ul>
-		</div>
-		<div id="block-order">
+		</section>
+		<section id="block-order">
 			<form name="order" action="" method="post">
 				<h1>У вас есть вопросы?</h1>				
 				<p>Оставьте заявку и мы с Вами свяжемся</p>
@@ -186,11 +195,11 @@
 				<input type="email" name="email" size="40" placeholder="Электронная почта">
 				<input id="submit" type="submit" name="send" value="Отправить заявку">
 			</form>
-		</div>
-		<div id="block-contact">
+		</section>
+		<section id="block-contact">
 			<div class="contact">8 921 979-34-25</div>
 			<div id="email">geometriadizaina@mail.ru</div>
 			<p>2018 «Геометрия Дизайна». Все права защищены.</p>
-		</div>
+		</section>
 	</div>
 </body>

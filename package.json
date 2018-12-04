@@ -22,5 +22,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "CraXviL",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "git": "^0.1.5"
+  }
 }

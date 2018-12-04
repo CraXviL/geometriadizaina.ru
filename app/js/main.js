@@ -29,21 +29,21 @@ $(document).ready(function() {
 })
 
 function scroll() {
+	var height1 = parseInt($('#block-main').css('height'));
+	var height2 = parseInt($('#block-portfolio').css('height'));
+	var height3 = parseInt($('#block-price').css('height'));
+
 	$('#menu-portfolio').click(function() {
-		var height = $('#block-main').css('height');
-		$('html').animate({scrollTop:height});
+		$('html').animate({scrollTop:height1});
 		window.location = '#block-portfolio';
 	});
+
 	$('#menu-price').click(function() {
-		var height1 = parseInt($('#block-main').css('height'));
-		var height2 = parseInt($('#block-portfolio').css('height'));
 		$('html').animate({scrollTop:height1+height2});
 		window.location = '#block-price';
 	});
+
 	$('#menu-contact').click(function() {
-		var height1 = parseInt($('#block-main').css('height'));
-		var height2 = parseInt($('#block-portfolio').css('height'));
-		var height3 = parseInt($('#block-price').css('height'));
 		$('html').animate({scrollTop:height1+height2+height3});
 		window.location = '#block-order';
 	});
