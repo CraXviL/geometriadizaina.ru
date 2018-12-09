@@ -14,16 +14,21 @@
 	font-family: "Circe-Regular";
 	src: url('../fonts/Circe-Regular.ttf');
 }
+@font-face {
+	font-family: "Gill Sans - Semi Bold";
+	src: url('../fonts/Gill-Sans.ttf');
+}
 
 body {
 	background-color: black;
 	font-family: Circe;
 }
 
-h1 {
-	margin-top: 5%;
+h2 {
+	margin-top: 125px;
 	font-size: 40px;
-	line-height: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 a {
@@ -40,8 +45,7 @@ ul {
 
 
 #container {
-	min-width: 1200px;
-	max-width: 1600px;
+	width: 1600px;
 	margin: 0 auto;
 }
 
@@ -57,21 +61,20 @@ ul {
 	background: url('../img/block-main-bg.png') no-repeat top;
 	background-size: cover;
 	color: #ddddde;
-	justify-content: space-between;
 }
 
 #block-main-top {
 	display: flex;
-	justify-content: space-around;
 	#logo {
-		margin: 60px 0 0 140px;
-		font-family: "Futura-Book-C";
+		margin: 64px 0 0 160px;
+		font-family: "Gill Sans - Semi Bold";
 		font-size: 24px;
+		letter-spacing: 1.2px;
 		text-align: left;
 		text-transform: uppercase;
 	}
 	#logo::before {
-		margin: -15px 10px 0 0;
+		margin: -13px 10px 0 0;
 		content: '';
 		height: 83px;
 		width: 73px;
@@ -81,51 +84,49 @@ ul {
 	}
 	nav {
 		margin-top: 80px;
-		display: flex;
-		justify-content: space-between;
-		flex-basis: 460px;
 		a {
-			font-size: 18px;
+			margin-left: 100px;
+			font-size: 20px;
 			opacity: .7;
+			letter-spacing: 0.15px;
 			color: white;
 			
 		}
 		a:hover {
 			opacity: 1;
-			
 		}
 	}
-	.contact {
-		align-self: center;
-		font-size: 40px;
-		font-weight: 700;
-		margin: 55px 85px 0 0;
-		white-space: nowrap;
-	}
-	.contact::before {
-		content: '';
-		margin: 10px;
-		height: 25px;
-		width: 25px;
-		float: left;
-		background: url('../img/telephone.png') no-repeat top;
-		background-size: contain;	
-	}
+}
+/* Телефоны в шапке и в подвале */
+.contact {
+	font-size: 36px;
+	margin: 73px 0 0 100px;
+}
+.contact::before {
+	content: '';
+	margin: 6px 10px 0 0;
+	height: 26px;
+	width: 26px;
+	float: left;
+	background: url('../img/telephone.png') no-repeat top;
+	background-size: contain;	
 }
 
-
 #block-main-description {
+	margin-top: 193px;
 	h1 {
-		margin: -1% 0 67px;
 		font-size: 48px;
+		font-weight: 700;
+		line-height: 60px;
 	}
 	h3 {
 		font-size: 30px;
-		line-height: 20px;
+		line-height: 80px;
+		font-weight: 400;
+		letter-spacing: 0.75px;
 	}
 	span {color: #ffda44}
 }
-
 
 #arrow {
 	align-self: center;
@@ -146,20 +147,25 @@ ul {
 .hidden {display: none}
 
 .owl-carousel .owl-item {
-	img {margin-bottom: 16.5%}
+	.singleImg {
+		/*height: 720px;*/
+		/*width: 500px;*/
+	}
 }
 
 #block-price {
-	height: 1200px;
+	height: 1070px;
+	h2 {margin: 20px 0 15px 0}
 	ul {
-		padding-left: 1%;
-		width: 80%;
-		height: 88px;
+		padding-left: 5%;
+		width: 100%;
+		height: 80px;
 		align-self: center;
+		box-sizing: border-box;
 	}
 	ul:nth-child(odd) {background-color: #e8e8e8}
 	li {
-		width: 18%;
+		width: 15%;
 		font-size: 24px;
 		align-self: center;
 		box-sizing: border-box;
@@ -173,7 +179,7 @@ ul {
 		padding-right: 0;
 	}
 	h3 {
-		height: 88px;
+		height: 80px;
 		font-size: 30px;
 		font-family: "Circe-Bold";
 		padding-top: 30px;
@@ -183,7 +189,7 @@ ul {
 		font-weight: 400;
 		font-family: "Circe-Regular";
 	}
-	.space {width: 4%}
+	.space {width: 5%}
 	.orange {border-bottom: 5px solid #ffda44}
 	.green {border-bottom: 5px solid #52ac62}
 	.blue {border-bottom: 5px solid #4d59a1}
@@ -195,7 +201,7 @@ ul {
 }
 
 form {
-	height: 670px;
+	height: 700px;
 	width: 500px;
 	margin: 100px auto;
 	background-color: white;
@@ -204,14 +210,14 @@ form {
 		font-size: 36px;
 	}
 	p {
-		margin: 0 0 30px 0;
+		margin: 20px 0 10px 0;
 		font-size: 18px;
 		color: #727272;
 	}
 	input {
 		font-size: 24px;
 		color: #272727;
-		height: 80px;
+		height: 95px;
 		width: 350px;
 		padding-left: 70px;
 		box-sizing: border-box; 
@@ -236,32 +242,30 @@ form {
 }
 
 #block-contact {
-	padding: 3%;
+	padding-top: 100px;
 	font-size: 24px;
 	#email {
+		margin: 35px auto;
 		font-size: 40px;
-		font-weight: 700;
-		margin-bottom: 35px;
-		align-self: center;
+		font-weight: bold;
 	}
 	#email::before {
 		content: '';
 		height: 28px;
 		width: 36px;
-		margin: 14px 7px 0 0;
+		margin: 14px 20px 0 0;
 		float: left;
 		background: url('../img/email.png') no-repeat top;
 		background-size: contain;
 	}
-	.contact {font-size: 40px}
+	.contact {
+		margin: 0 auto;
+		font-size: 40px;
+		font-weight: bold;
+	}
 	.contact::before {
-		margin-top: 5px;
+		margin: 0 20px 0 0;
 		height: 36px;
 		width: 36px;
 	}
-}
-
-@media only screen and (orientation:portrait) {
-	#arrow {margin-bottom: 5%}
-	#block-price h3 {font-size: 1em}
 }

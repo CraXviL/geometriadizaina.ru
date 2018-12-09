@@ -14,14 +14,19 @@
   font-family: "Circe-Regular";
   src: url('../fonts/Circe-Regular.ttf');
 }
+@font-face {
+  font-family: "Gill Sans - Semi Bold";
+  src: url('../fonts/Gill-Sans.ttf');
+}
 body {
   background-color: black;
   font-family: Circe;
 }
-h1 {
-  margin-top: 5%;
+h2 {
+  margin-top: 125px;
   font-size: 40px;
-  line-height: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 a {
   cursor: pointer;
@@ -39,8 +44,7 @@ ul li {
   list-style: none;
 }
 #container {
-  min-width: 1200px;
-  max-width: 1600px;
+  width: 1600px;
   margin: 0 auto;
 }
 #container > section {
@@ -62,29 +66,23 @@ ul li {
   -webkit-background-size: cover;
           background-size: cover;
   color: #ddddde;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 #block-main-top {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
 }
 #block-main-top #logo {
-  margin: 60px 0 0 140px;
-  font-family: "Futura-Book-C";
+  margin: 64px 0 0 160px;
+  font-family: "Gill Sans - Semi Bold";
   font-size: 24px;
+  letter-spacing: 1.2px;
   text-align: left;
   text-transform: uppercase;
 }
 #block-main-top #logo::before {
-  margin: -15px 10px 0 0;
+  margin: -13px 10px 0 0;
   content: '';
   height: 83px;
   width: 73px;
@@ -95,52 +93,45 @@ ul li {
 }
 #block-main-top nav {
   margin-top: 80px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-basis: 460px;
-      -ms-flex-preferred-size: 460px;
-          flex-basis: 460px;
 }
 #block-main-top nav a {
-  font-size: 18px;
+  margin-left: 100px;
+  font-size: 20px;
   opacity: 0.7;
+  letter-spacing: 0.15px;
   color: white;
 }
 #block-main-top nav a:hover {
   opacity: 1;
 }
-#block-main-top .contact {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
-  font-size: 40px;
-  font-weight: 700;
-  margin: 55px 85px 0 0;
-  white-space: nowrap;
+/* Телефоны в шапке и в подвале */
+.contact {
+  font-size: 36px;
+  margin: 73px 0 0 100px;
 }
-#block-main-top .contact::before {
+.contact::before {
   content: '';
-  margin: 10px;
-  height: 25px;
-  width: 25px;
+  margin: 6px 10px 0 0;
+  height: 26px;
+  width: 26px;
   float: left;
   background: url('../img/telephone.png') no-repeat top;
   -webkit-background-size: contain;
           background-size: contain;
 }
+#block-main-description {
+  margin-top: 193px;
+}
 #block-main-description h1 {
-  margin: -1% 0 67px;
   font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
 }
 #block-main-description h3 {
   font-size: 30px;
-  line-height: 20px;
+  line-height: 80px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
 }
 #block-main-description span {
   color: #ffda44;
@@ -162,25 +153,31 @@ ul li {
 .hidden {
   display: none;
 }
-.owl-carousel .owl-item img {
-  margin-bottom: 16.5%;
+.owl-carousel .owl-item .singleImg {
+  /*height: 720px;*/
+  /*width: 500px;*/
 }
 #block-price {
-  height: 1200px;
+  height: 1070px;
+}
+#block-price h2 {
+  margin: 20px 0 15px 0;
 }
 #block-price ul {
-  padding-left: 1%;
-  width: 80%;
-  height: 88px;
+  padding-left: 5%;
+  width: 100%;
+  height: 80px;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 #block-price ul:nth-child(odd) {
   background-color: #e8e8e8;
 }
 #block-price li {
-  width: 18%;
+  width: 15%;
   font-size: 24px;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
@@ -197,7 +194,7 @@ ul li {
   padding-right: 0;
 }
 #block-price h3 {
-  height: 88px;
+  height: 80px;
   font-size: 30px;
   font-family: "Circe-Bold";
   padding-top: 30px;
@@ -209,7 +206,7 @@ ul li {
   font-family: "Circe-Regular";
 }
 #block-price .space {
-  width: 4%;
+  width: 5%;
 }
 #block-price .orange {
   border-bottom: 5px solid #ffda44;
@@ -226,7 +223,7 @@ ul li {
           background-size: cover;
 }
 form {
-  height: 670px;
+  height: 700px;
   width: 500px;
   margin: 100px auto;
   background-color: white;
@@ -236,14 +233,14 @@ form h1 {
   font-size: 36px;
 }
 form p {
-  margin: 0 0 30px 0;
+  margin: 20px 0 10px 0;
   font-size: 18px;
   color: #727272;
 }
 form input {
   font-size: 24px;
   color: #272727;
-  height: 80px;
+  height: 95px;
   width: 350px;
   padding-left: 70px;
   -webkit-box-sizing: border-box;
@@ -276,40 +273,31 @@ form #submit:hover {
           box-shadow: 3px 4px 10px grey;
 }
 #block-contact {
-  padding: 3%;
+  padding-top: 100px;
   font-size: 24px;
 }
 #block-contact #email {
+  margin: 35px auto;
   font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 35px;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  font-weight: bold;
 }
 #block-contact #email::before {
   content: '';
   height: 28px;
   width: 36px;
-  margin: 14px 7px 0 0;
+  margin: 14px 20px 0 0;
   float: left;
   background: url('../img/email.png') no-repeat top;
   -webkit-background-size: contain;
           background-size: contain;
 }
 #block-contact .contact {
+  margin: 0 auto;
   font-size: 40px;
+  font-weight: bold;
 }
 #block-contact .contact::before {
-  margin-top: 5px;
+  margin: 0 20px 0 0;
   height: 36px;
   width: 36px;
-}
-@media only screen and (orientation: portrait) {
-  #arrow {
-    margin-bottom: 5%;
-  }
-  #block-price h3 {
-    font-size: 1em;
-  }
 }
