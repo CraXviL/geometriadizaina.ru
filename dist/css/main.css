@@ -20,7 +20,7 @@
 }
 body {
   background-color: black;
-  font-family: Circe;
+  font-family: Circe, arial;
 }
 h2 {
   margin-top: 125px;
@@ -142,6 +142,12 @@ ul li {
           align-self: center;
   margin-bottom: 2%;
 }
+#block-portfolio {
+  height: 800px;
+}
+#block-portfolio ul {
+  margin-top: 20px;
+}
 #block-portfolio a {
   color: #272727;
   font-size: 24px;
@@ -150,17 +156,18 @@ ul li {
 #block-portfolio a.active {
   color: #ffda44;
 }
-.hidden {
+.hidden > div {
   display: none;
 }
-.owl-carousel .owl-item img {
-  margin-bottom: 16.5%;
+.owl-carousel .owl-item .singleImg {
+  height: 433px;
+  width: 280px;
 }
 #block-price {
   height: 1070px;
 }
 #block-price h2 {
-  margin: 20px 0 15px 0;
+  margin: 120px 0 15px 0;
 }
 #block-price ul {
   padding-left: 5%;
@@ -193,7 +200,7 @@ ul li {
   padding-right: 0;
 }
 #block-price h3 {
-  height: 88px;
+  height: 80px;
   font-size: 30px;
   font-family: "Circe-Bold";
   padding-top: 30px;
@@ -265,7 +272,7 @@ form #submit {
   cursor: pointer;
   font-size: 30px;
   font-weight: 700;
-  border-bottom: 1px solid #ffda44;
+  border: 1px solid #ffda44;
 }
 form #submit:hover {
   -webkit-box-shadow: 3px 4px 10px grey;
@@ -299,12 +306,4 @@ form #submit:hover {
   margin: 0 20px 0 0;
   height: 36px;
   width: 36px;
-}
-@media only screen and (orientation: portrait) {
-  #arrow {
-    margin-bottom: 5%;
-  }
-  #block-price h3 {
-    font-size: 1em;
-  }
 }

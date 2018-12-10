@@ -3,19 +3,26 @@ $(document).ready(() => {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
-    // autoplay: true,
+    autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
-    items: 3,
+    items: 5,
     margin: 20,
   });
   
-  $('#oldGalleryButton').click(() => {
-  	$('#newGallery').removeClass('popup-gallery owl-carousel').addClass('hidden');
-  	$('#oldGallery').addClass('popup-gallery owl-carousel').removeClass('hidden');
-  	$('#oldGalleryButton').addClass('active');
-  	$('#newGalleryButton').removeClass('active');
-  })
+  // $('#block-portfolio > div').click((e) => {
+  //   if (e.target.id === "oldGalleryButton") {
+  //     $('#oldGallery').removeClass('hidden');
+  //     $('#newGallery').addClass('hidden');
+  //     $('#oldGalleryButton').addClass('active');
+  //   	$('#newGalleryButton').removeClass('active');
+  //   } else {
+  //     $('#newGallery').removeClass('hidden');
+  //     $('#oldGallery').addClass('hidden');
+  //     $('#newGalleryButton').addClass('active');
+  //     $('#oldGalleryButton').removeClass('active');
+  //   }
+  // })
 
   $('.popup-gallery').magnificPopup({
     delegate: 'a',

@@ -6,9 +6,14 @@ $(document).ready(() => {
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
-    items: 3,
+    items: 5,
     margin: 20,
   });
+  
+  $('#block-portfolio > div').click(() => {
+  	$('#block-portfolio ul').toggleClass('hidden');
+  	$('#block-portfolio a').toggleClass('active');
+  })
 
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
