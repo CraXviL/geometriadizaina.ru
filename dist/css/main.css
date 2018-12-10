@@ -61,7 +61,8 @@ ul li {
   text-align: center;
 }
 #block-main {
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 900px;
   background: url('../img/block-main-bg.png') no-repeat top;
   -webkit-background-size: cover;
           background-size: cover;
@@ -159,10 +160,6 @@ ul li {
 .hidden > div {
   display: none;
 }
-.owl-carousel .owl-item .singleImg {
-  height: 433px;
-  width: 280px;
-}
 #block-price {
   height: 1070px;
 }
@@ -203,7 +200,7 @@ ul li {
   height: 80px;
   font-size: 30px;
   font-family: "Circe-Bold";
-  padding-top: 30px;
+  padding-top: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }

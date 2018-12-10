@@ -10,10 +10,19 @@ $(document).ready(() => {
     margin: 20,
   });
   
-  $('#block-portfolio > div').click(() => {
-  	$('#block-portfolio ul').toggleClass('hidden');
-  	$('#block-portfolio a').toggleClass('active');
-  })
+  // $('#block-portfolio > div').click((e) => {
+  //   if (e.target.id === "oldGalleryButton") {
+  //     $('#oldGallery').removeClass('hidden');
+  //     $('#newGallery').addClass('hidden');
+  //     $('#oldGalleryButton').addClass('active');
+  //   	$('#newGalleryButton').removeClass('active');
+  //   } else {
+  //     $('#newGallery').removeClass('hidden');
+  //     $('#oldGallery').addClass('hidden');
+  //     $('#newGalleryButton').addClass('active');
+  //     $('#oldGalleryButton').removeClass('active');
+  //   }
+  // })
 
   $('.popup-gallery').magnificPopup({
     delegate: 'a',

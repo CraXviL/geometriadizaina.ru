@@ -88,7 +88,7 @@ gulp.task('build', ['img', 'less', 'libs', 'scripts'], function() {
     var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
     .pipe(gulp.dest('dist/js'));
 
-    var buildHtml = gulp.src('app/*.php') // Переносим HTML в продакшен
+    var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
 
 });
