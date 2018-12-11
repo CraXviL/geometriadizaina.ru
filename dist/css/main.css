@@ -144,7 +144,7 @@ ul li {
   margin-bottom: 2%;
 }
 #block-portfolio {
-  height: 800px;
+  height: 750px;
 }
 #block-portfolio ul {
   margin-top: 20px;
@@ -275,16 +275,16 @@ form #submit:hover {
   -webkit-box-shadow: 3px 4px 10px grey;
           box-shadow: 3px 4px 10px grey;
 }
-#block-contact {
+footer {
   padding-top: 100px;
   font-size: 24px;
 }
-#block-contact #email {
+footer #email {
   margin: 35px auto;
   font-size: 40px;
   font-weight: bold;
 }
-#block-contact #email::before {
+footer #email::before {
   content: '';
   height: 28px;
   width: 36px;
@@ -294,12 +294,12 @@ form #submit:hover {
   -webkit-background-size: contain;
           background-size: contain;
 }
-#block-contact .contact {
+footer .contact {
   margin: 0 auto;
   font-size: 40px;
   font-weight: bold;
 }
-#block-contact .contact::before {
+footer .contact::before {
   margin: 0 20px 0 0;
   height: 36px;
   width: 36px;
