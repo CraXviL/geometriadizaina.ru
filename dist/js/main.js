@@ -9,20 +9,6 @@ $(document).ready(() => {
     items: 5,
     margin: 20,
   });
-  
-  // $('#block-portfolio > div').click((e) => {
-  //   if (e.target.id === "oldGalleryButton") {
-  //     $('#oldGallery').removeClass('hidden');
-  //     $('#newGallery').addClass('hidden');
-  //     $('#oldGalleryButton').addClass('active');
-  //   	$('#newGalleryButton').removeClass('active');
-  //   } else {
-  //     $('#newGallery').removeClass('hidden');
-  //     $('#oldGallery').addClass('hidden');
-  //     $('#newGalleryButton').addClass('active');
-  //     $('#oldGalleryButton').removeClass('active');
-  //   }
-  // })
 
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
@@ -39,22 +25,37 @@ $(document).ready(() => {
     },
   });
   // делаем плавную прокрутку по якорям
-  const height1 = parseInt($('#block-main').css('height'), 10);
-  const height2 = parseInt($('#block-portfolio').css('height'), 10);
-  const height3 = parseInt($('#block-price').css('height'), 10);
+  const HEIGHT1 = parseInt($('#block-main').css('height'), 10);
+  const HEIGHT2 = parseInt($('#block-portfolio').css('height'), 10);
+  const HEIGHT3 = parseInt($('#block-price').css('height'), 10);
 
   $('#menu-portfolio').click(() => {
-    $('html').animate({ scrollTop: height1 });
+    $('html').animate({ scrollTop: HEIGHT1 });
     window.location = '#block-portfolio';
   });
 
   $('#menu-price').click(() => {
-    $('html').animate({ scrollTop: height1 + height2 });
+    $('html').animate({ scrollTop: HEIGHT1 + HEIGHT2 });
     window.location = '#block-price';
   });
 
   $('#menu-contact').click(() => {
-    $('html').animate({ scrollTop: height1 + height2 + height3 });
+    $('html').animate({ scrollTop: HEIGHT1 + HEIGHT2 + HEIGHT3 });
     window.location = '#block-order';
   });
+    
+  // $('#block-portfolio > div').click((e) => {
+  //   if (e.target.id === "oldGalleryButton") {
+  //     $('#oldGallery').removeClass('hidden');
+  //     $('#newGallery').addClass('hidden');
+  //     $('#oldGalleryButton').addClass('active');
+  //    $('#newGalleryButton').removeClass('active');
+  //   } else {
+  //     $('#newGallery').removeClass('hidden');
+  //     $('#oldGallery').addClass('hidden');
+  //     $('#newGalleryButton').addClass('active');
+  //     $('#oldGalleryButton').removeClass('active');
+  //   }
+  // })
+
 });

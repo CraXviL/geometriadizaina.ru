@@ -47,7 +47,8 @@ ul li {
   width: 1600px;
   margin: 0 auto;
 }
-#container > section {
+#container > section,
+footer {
   background-color: white;
   display: -webkit-box;
   display: -webkit-flex;
