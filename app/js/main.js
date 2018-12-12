@@ -44,19 +44,21 @@ $(document).ready(() => {
     window.location = '#block-order';
   });
 
-  $('input[type="tel"]').on('input', function(e) {
-    if(!/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(parseInt(e.target.value))) {
-      $('input[type="tel"]').css('border', '3px solid red');
+  $('input[type="tel"]').on('input', (e) => {
+    if (!/^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d- ]{7,10}$/.test(e.target.value.trim())) {
+      $('input[type="tel"]').css({ border: '3px solid red' });
+    } else {
+      $('input[type="tel"]').css({ border: '3px solid white', 'border-bottom': '1px solid black' });
     }
-    console.log(parseInt(e.target.value), /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(parseInt(e.target.value)));
-  })
+  });
 
-  $('input[type="email"]').on('input', function(e) {
-    if(!/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(e.target.value)) {
-      $('input[type="email"]').css('shadow-box', '5 5 5 red');
+  $('input[type="email"]').on('input', (e) => {
+    if (!/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(e.target.value.trim())) {
+      $('input[type="email"]').css('border', '3px solid red');
+    } else {
+      $('input[type="email"]').css({ border: '3px solid white', 'border-bottom': '1px solid black' });
     }
-    console.log(e.target.value, typeof(e.target.value), /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(e.target.value));
-  })
+  });
 
   // $('#block-portfolio > div').click((e) => {
   //   if (e.target.id === "oldGalleryButton") {
@@ -71,5 +73,4 @@ $(document).ready(() => {
   //     $('#oldGalleryButton').removeClass('active');
   //   }
   // })
-
 });
