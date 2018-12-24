@@ -1,7 +1,7 @@
 var hidden = true;
 var zoom = false;
 $(document).ready(function() {
-	$(".owl-carousel").owlCarousel({
+	$('.owl-carousel').owlCarousel({
 		loop:true,
 		mouseDrag:true,
 		touchDrag:true,
