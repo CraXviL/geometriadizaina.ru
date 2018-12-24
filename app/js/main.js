@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-var hidden = true;
-var zoom = false;
-$(document).ready(function() {
-	$('.owl-carousel').owlCarousel({
-		loop:true,
-		mouseDrag:true,
-		touchDrag:true,
-		autoplay:true,
-		autoplayTimeout:2000,
-		autoplayHoverPause:true,
-		items:3,
-		margin:20
-	});
-	scroll();
-	$('.popup-gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		removalDelay: 300,
-		zoom: {
-    		enabled: true,
-    		duration: 300 // продолжительность анимации. Не меняйте данный параметр также и в CSS
-		},
-		gallery: {
-		    enabled: true,
-		    navigateByImgClick: true,
-		    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-		}
-	});
-})
-=======
 $(document).ready(() => {
   $('.owl-carousel').owlCarousel({
     loop: true,
@@ -40,7 +9,6 @@ $(document).ready(() => {
     items: 5,
     margin: 20,
   });
->>>>>>> 5b3d25fc2244aa628238b6a60c0a26e5683192b0
 
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
@@ -91,6 +59,11 @@ $(document).ready(() => {
       $('input[type="email"]').css({ border: '3px solid white', 'border-bottom': '1px solid black' });
     }
   });
+
+  $('#submit').click(() => {
+    preventDefault();
+    $('form').html('<h2>Заявка отправлена</h2><p>Мы с Вами обязательно свяжемся</p>');
+  })
 
   // $('#block-portfolio > div').click((e) => {
   //   if (e.target.id === "oldGalleryButton") {
