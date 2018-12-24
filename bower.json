@@ -1,6 +1,6 @@
 {
-  "name": "standart-kit",
-  "version": "0.0.1",
+  "name": "jquery",
+  "version": "1.0.0",
   "authors": [
     "CraXviL"
   ],
@@ -10,7 +10,8 @@
     "html5shiv": "latest",
     "respond": "latest",
     "normalize.css": "latest",
-    "magnific-popup": "latest"
+    "magnific-popup": "latest",
+    "owl.carousel": "OwlCarousel2#^2.3.4"
   },
   "description": "",
   "main": "",

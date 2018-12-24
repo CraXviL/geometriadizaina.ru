@@ -32,7 +32,7 @@ gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'app/libs/OwlCarousel2/dist/owl.carousel.min.js',
+        'app/libs/owl.carousel/dist/owl.carousel.min.js',
         'app/libs/html5shiv/dist/html5shiv.min.js',
         'app/libs/html5shiv/dist/html5shiv-printshiv.min.js',
         'app/libs/respond/dist/respond.min.js',
@@ -45,7 +45,8 @@ gulp.task('scripts', function() {
 gulp.task('libs', function() {
     return gulp.src([
         'app/libs/magnific-popup/dist/magnific-popup.css',
-        'app/libs/OwlCarousel2/dist/assets/owl.carousel.min.css',
+        'app/libs/owl.carousel/dist/assets/owl.carousel.min.css',
+        // 'app/libs/font-awesome/web-fonts-with-css/css/fontawesome.min.css',
 		'app/libs/normalize.css/normalize.css'])
 	.pipe(concat('libs.css'))
 	.pipe(cssnano())
@@ -87,7 +88,7 @@ gulp.task('build', ['img', 'less', 'libs', 'scripts'], function() {
     var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
     .pipe(gulp.dest('dist/js'));
 
-    var buildHtml = gulp.src('app/*.php') // Переносим HTML в продакшен
+    var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
 
 });

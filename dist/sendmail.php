@@ -1,4 +1,5 @@
 <?php header("Content-type: text/html; charset=utf-8");
+	echo('Заявка отправлена!');
 	if(isset($_POST["send"])) {
 		$from = htmlspecialchars("geometriadizaina.ru");
 		$to = htmlspecialchars("geometriadizaina@mail.ru");
