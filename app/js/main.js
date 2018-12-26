@@ -60,10 +60,21 @@ $(document).ready(() => {
     }
   });
 
-  $('#submit').click(() => {
-    preventDefault();
+  $('form').submit((e) => {
+    e.preventDefault();
+    $.ajax({
+      url: 'sendmail.php',
+      type: 'POST',
+      data: $('form').serialize(),
+      success: function () {
+          console.log('Успешно');
+      },
+      error: function () {
+          console.log('возникла ошибка');
+      }
+    });
     $('form').html('<h2>Заявка отправлена</h2><p>Мы с Вами обязательно свяжемся</p>');
-  })
+  });
 
   // $('#block-portfolio > div').click((e) => {
   //   if (e.target.id === "oldGalleryButton") {
