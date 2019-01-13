@@ -67,10 +67,10 @@ $(document).ready(() => {
       type: 'POST',
       data: $('form').serialize(),
       success: function () {
-          console.log('Успешно');
+          console.log('Запрос отправлен');
       },
       error: function () {
-          console.log('возникла ошибка');
+          console.log('Возникла ошибка при отправке');
       }
     });
     $('form').html('<h2>Заявка отправлена</h2><p>Мы с Вами обязательно свяжемся</p>');
