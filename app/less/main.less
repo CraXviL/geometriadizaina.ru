@@ -20,6 +20,7 @@
 }
 
 body {
+	min-width: 700px;
 	font-family: Circe, arial;
 	background: black;
 }
@@ -31,7 +32,11 @@ h2 {
 	text-transform: uppercase;
 }
 
-p, li {
+p {
+	font-size: 24px;
+}
+
+li {
 	font-size: 1.5em;
 
 }
@@ -58,6 +63,7 @@ section, footer {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	transition: all .5s ease;
 }
 
 #block-main {
@@ -77,8 +83,9 @@ section, footer {
 	}
 	#logo {
 		flex-basis: 31%;
+		min-width: 350px;
 		margin-top: 64px;
-		padding-left: 160px;
+		padding-left: 10%;
 		font-family: "GillSans-SemiBold";
 		letter-spacing: 1.2px;
 		text-align: left;
@@ -98,39 +105,31 @@ section, footer {
 	    order: 2;
 		ul {
 	    	justify-content: space-between;
-
-		}
-		li {
-			flex: 0 1 135px;
-			font-size: 1.25em;
-			opacity: .7;
-			letter-spacing: 0.15px;
-			color: white;
-		}
-		li:hover {
-			opacity: 1;
-		}
-		li:nth-child(even) {
-			padding-left: 15px;
+			li {
+				flex: 0 1 135px;
+				font-size: 20px;
+				opacity: .7;
+				letter-spacing: 0.15px;
+				color: white;
+			}
+			li:hover {
+				opacity: 1;
+			}
+			li:nth-child(even) {
+				padding-left: 1%;
+			}
 		}
 	}
 	.contact-menu {
+		font-size: 36px;
+		margin-top: 73px;
 		flex-basis: 34%;
-		padding-left: 100px;
+		padding-left: 6%;
 		text-align: left;
 		order: 3;
 	}
 }
 
-@media screen and (max-width: 1300px) {
-	.contact-menu {order: 1 !important}
-	section > #block-main-top > div {padding-left: 0 !important}
-}
-/* Телефоны в шапке и в подвале */
-.contact {
-	font-size: 2.25em;
-	margin-top: 73px;
-}
 .contact::before {
 	content: '';
 	margin: 6px 10px 0 0;
@@ -187,7 +186,7 @@ section, footer {
 	}
 	ul:last-child>li:first-child {
 		height: 80px;
-		margin-top: 1.66em;
+		margin-top: 50px;
 		font-size: 1.875em;
 		font-family: "Circe-Bold";
 		box-sizing: border-box;
@@ -214,15 +213,15 @@ form {
 	background-color: white;
 	h1 {
 		margin: 80px 0 0 0;
-		font-size: 2.25em;
+		font-size: 36px;
 	}
 	p {
 		margin: 20px 0 10px 0;
-		font-size: 1.25em;
+		font-size: 18px;
 		color: #727272;
 	}
 	input {
-		font-size: 1.5em;
+		font-size: 24px;
 		color: #272727;
 		height: 95px;
 		width: 350px;
@@ -230,7 +229,6 @@ form {
 		box-sizing: border-box; 
 		border: 3px solid white;
 		border-bottom: 1px solid black;
-		transition: all 1s ease;
 	}
 	input[name="name"] {background: url('../img/avatar.png') no-repeat 20px}
 	input[name="phone"]{background: url('../img/phone-call.png') no-repeat 20px}
@@ -242,7 +240,7 @@ form {
 		color: white;
 		background-color: #ffda44;
 		cursor: pointer;
-		font-size: 1.875em;
+		font-size: 30px;
 		font-weight: 700;
 		border: 1px solid #ffda44;
 	}
@@ -253,7 +251,7 @@ footer {
 	padding-top: 100px;
 	#email {
 		margin: 35px auto;
-		font-size: 2.5em;
+		font-size: 40px;
 		font-weight: bold;
 	}
 	#email::before {
@@ -267,7 +265,7 @@ footer {
 	}
 	.contact {
 		margin: 0 auto;
-		font-size: 2.5em;
+		font-size: 40px;
 		font-weight: bold;
 	}
 	.contact::before {
@@ -279,5 +277,44 @@ footer {
 		margin-right: 10px;
 		font-family: Font Awesome\ 5 Free;
 	    content: "\f1f9";
+	}
+}
+
+@media screen and (max-width: 1306px) {
+	.contact-menu {
+		order: 1  !important;
+		padding-left: 0 !important
+	}
+	nav {flex-basis: 50% !important}
+	#block-main-description {margin-top: 90px !important}
+}
+
+@media screen and (max-width: 1100px) {
+	html {
+		font-size: 14px;
+	}
+	#logo {
+		padding-left: 5% !important;
+	}
+	nav li {
+		padding: 0 5%;
+	}
+	nav li:nth-child(even) {
+		padding-left: 5% !important;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	#logo {
+		padding-left: 0 !important;
+	}
+	html {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	html {
+		font-size: 10px;
 	}
 }

@@ -19,6 +19,7 @@
   src: url('../fonts/Gill-Sans.ttf');
 }
 body {
+  min-width: 700px;
   font-family: Circe, arial;
   background: black;
 }
@@ -28,7 +29,9 @@ h2 {
   font-weight: 700;
   text-transform: uppercase;
 }
-p,
+p {
+  font-size: 24px;
+}
 li {
   font-size: 1.5em;
 }
@@ -64,6 +67,9 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 #block-main {
   height: 900px;
@@ -95,8 +101,9 @@ footer {
   -webkit-flex-basis: 31%;
       -ms-flex-preferred-size: 31%;
           flex-basis: 31%;
+  min-width: 350px;
   margin-top: 64px;
-  padding-left: 160px;
+  padding-left: 10%;
   font-family: "GillSans-SemiBold";
   letter-spacing: 1.2px;
   text-align: left;
@@ -129,48 +136,34 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-#block-main-top nav li {
+#block-main-top nav ul li {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 135px;
       -ms-flex: 0 1 135px;
           flex: 0 1 135px;
-  font-size: 1.25em;
+  font-size: 20px;
   opacity: 0.7;
   letter-spacing: 0.15px;
   color: white;
 }
-#block-main-top nav li:hover {
+#block-main-top nav ul li:hover {
   opacity: 1;
 }
-#block-main-top nav li:nth-child(even) {
-  padding-left: 15px;
+#block-main-top nav ul li:nth-child(even) {
+  padding-left: 1%;
 }
 #block-main-top .contact-menu {
+  font-size: 36px;
+  margin-top: 73px;
   -webkit-flex-basis: 34%;
       -ms-flex-preferred-size: 34%;
           flex-basis: 34%;
-  padding-left: 100px;
+  padding-left: 6%;
   text-align: left;
   -webkit-box-ordinal-group: 4;
   -webkit-order: 3;
       -ms-flex-order: 3;
           order: 3;
-}
-@media screen and (max-width: 1300px) {
-  .contact-menu {
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  #block-main-top > div {
-    padding-left: 0;
-  }
-}
-/* Телефоны в шапке и в подвале */
-.contact {
-  font-size: 2.25em;
-  margin-top: 73px;
 }
 .contact::before {
   content: '';
@@ -237,7 +230,7 @@ footer {
 }
 #block-price ul:last-child > li:first-child {
   height: 80px;
-  margin-top: 1.66em;
+  margin-top: 50px;
   font-size: 1.875em;
   font-family: "Circe-Bold";
   -webkit-box-sizing: border-box;
@@ -272,15 +265,15 @@ form {
 }
 form h1 {
   margin: 80px 0 0 0;
-  font-size: 2.25em;
+  font-size: 36px;
 }
 form p {
   margin: 20px 0 10px 0;
-  font-size: 1.25em;
+  font-size: 18px;
   color: #727272;
 }
 form input {
-  font-size: 1.5em;
+  font-size: 24px;
   color: #272727;
   height: 95px;
   width: 350px;
@@ -289,9 +282,6 @@ form input {
           box-sizing: border-box;
   border: 3px solid white;
   border-bottom: 1px solid black;
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
 }
 form input[name="name"] {
   background: url('../img/avatar.png') no-repeat 20px;
@@ -309,7 +299,7 @@ form #submit {
   color: white;
   background-color: #ffda44;
   cursor: pointer;
-  font-size: 1.875em;
+  font-size: 30px;
   font-weight: 700;
   border: 1px solid #ffda44;
 }
@@ -322,7 +312,7 @@ footer {
 }
 footer #email {
   margin: 35px auto;
-  font-size: 2.5em;
+  font-size: 40px;
   font-weight: bold;
 }
 footer #email::before {
@@ -337,7 +327,7 @@ footer #email::before {
 }
 footer .contact {
   margin: 0 auto;
-  font-size: 2.5em;
+  font-size: 40px;
   font-weight: bold;
 }
 footer .contact::before {
@@ -349,4 +339,48 @@ footer p:before {
   margin-right: 10px;
   font-family: Font Awesome\ 5 Free;
   content: "\f1f9";
+}
+@media screen and (max-width: 1306px) {
+  .contact-menu {
+    -webkit-box-ordinal-group: 2  !important;
+    -webkit-order: 1  !important;
+        -ms-flex-order: 1  !important;
+            order: 1  !important;
+    padding-left: 0 !important;
+  }
+  nav {
+    -webkit-flex-basis: 50% !important;
+        -ms-flex-preferred-size: 50% !important;
+            flex-basis: 50% !important;
+  }
+  #block-main-description {
+    margin-top: 90px !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 14px;
+  }
+  #logo {
+    padding-left: 5% !important;
+  }
+  nav li {
+    padding: 0 5%;
+  }
+  nav li:nth-child(even) {
+    padding-left: 5% !important;
+  }
+}
+@media screen and (max-width: 960px) {
+  #logo {
+    padding-left: 0 !important;
+  }
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
 }
