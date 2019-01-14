@@ -79,18 +79,32 @@ footer {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   white-space: nowrap;
 }
+#block-main-top > div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+}
 #block-main-top #logo {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 300px;
-      -ms-flex: 0 1 300px;
-          flex: 0 1 300px;
+  -webkit-flex-basis: 31%;
+      -ms-flex-preferred-size: 31%;
+          flex-basis: 31%;
   margin-top: 64px;
+  padding-left: 160px;
   font-family: "GillSans-SemiBold";
   letter-spacing: 1.2px;
   text-align: left;
   text-transform: uppercase;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
 }
 #block-main-top #logo > p {
   margin: 1px;
@@ -100,17 +114,26 @@ footer {
   float: left;
 }
 #block-main-top nav {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 700px;
-      -ms-flex: 0 1 700px;
-          flex: 0 1 700px;
+  -webkit-flex-basis: 35%;
+      -ms-flex-preferred-size: 35%;
+          flex-basis: 35%;
   margin-top: 80px;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+}
+#block-main-top nav ul {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 #block-main-top nav li {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 222px;
-      -ms-flex: 0 1 222px;
-          flex: 0 1 222px;
+  -webkit-flex: 0 1 135px;
+      -ms-flex: 0 1 135px;
+          flex: 0 1 135px;
   font-size: 1.25em;
   opacity: 0.7;
   letter-spacing: 0.15px;
@@ -118,6 +141,31 @@ footer {
 }
 #block-main-top nav li:hover {
   opacity: 1;
+}
+#block-main-top nav li:nth-child(even) {
+  padding-left: 15px;
+}
+#block-main-top .contact-menu {
+  -webkit-flex-basis: 34%;
+      -ms-flex-preferred-size: 34%;
+          flex-basis: 34%;
+  padding-left: 100px;
+  text-align: left;
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3;
+}
+@media screen and (max-width: 1300px) {
+  .contact-menu {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #block-main-top > div {
+    padding-left: 0;
+  }
 }
 /* Телефоны в шапке и в подвале */
 .contact {

@@ -69,14 +69,21 @@ section, footer {
 #block-main-top {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	white-space: nowrap;
+	&>div {
+		box-sizing: border-box;
+		flex-shrink: 1;
+	}
 	#logo {
-		flex: 0 1 300px;
+		flex-basis: 31%;
 		margin-top: 64px;
+		padding-left: 160px;
 		font-family: "GillSans-SemiBold";
 		letter-spacing: 1.2px;
 		text-align: left;
 		text-transform: uppercase;
+		order: 1;
 	}
 	#logo>p {
 		margin: 1px;
@@ -86,10 +93,15 @@ section, footer {
 		float: left;
 	}
 	nav {
-	    flex: 0 1 700px;
+	    flex-basis: 35%;
 		margin-top: 80px;
+	    order: 2;
+		ul {
+	    	justify-content: space-between;
+
+		}
 		li {
-			flex: 0 1 222px;
+			flex: 0 1 135px;
 			font-size: 1.25em;
 			opacity: .7;
 			letter-spacing: 0.15px;
@@ -98,7 +110,21 @@ section, footer {
 		li:hover {
 			opacity: 1;
 		}
+		li:nth-child(even) {
+			padding-left: 15px;
+		}
 	}
+	.contact-menu {
+		flex-basis: 34%;
+		padding-left: 100px;
+		text-align: left;
+		order: 3;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.contact-menu {order: 1 !important}
+	section > #block-main-top > div {padding-left: 0 !important}
 }
 /* Телефоны в шапке и в подвале */
 .contact {
