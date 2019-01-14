@@ -19,14 +19,18 @@
   src: url('../fonts/Gill-Sans.ttf');
 }
 body {
-  background-color: black;
   font-family: Circe, arial;
+  background: black;
 }
 h2 {
-  margin-top: 125px;
-  font-size: 40px;
+  margin: 110px 0 60px 0;
+  font-size: 2.5em;
   font-weight: 700;
   text-transform: uppercase;
+}
+p,
+li {
+  font-size: 1.5em;
 }
 a {
   cursor: pointer;
@@ -35,19 +39,19 @@ a {
 ul {
   padding: 0;
   margin: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 ul li {
   list-style: none;
 }
-#container {
-  width: 1600px;
+.container {
   margin: 0 auto;
+  max-width: 1600px;
 }
-#container > section,
+section,
 footer {
   background-color: white;
   display: -webkit-box;
@@ -62,11 +66,8 @@ footer {
   text-align: center;
 }
 #block-main {
-  height: 100vh;
-  min-height: 900px;
+  height: 900px;
   background: url('../img/block-main-bg.png') no-repeat top;
-  -webkit-background-size: cover;
-          background-size: cover;
   color: #ddddde;
 }
 #block-main-top {
@@ -74,26 +75,43 @@ footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  white-space: nowrap;
 }
 #block-main-top #logo {
-  margin: 64px 0 0 160px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 300px;
+      -ms-flex: 0 1 300px;
+          flex: 0 1 300px;
+  margin-top: 64px;
   font-family: "GillSans-SemiBold";
-  font-size: 24px;
   letter-spacing: 1.2px;
   text-align: left;
   text-transform: uppercase;
 }
+#block-main-top #logo > p {
+  margin: 1px;
+}
 #block-main-top #logo > img {
   margin: -13px 10px 0 0;
   float: left;
-  background: url('../img/logo.png') no-repeat top;
 }
 #block-main-top nav {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 700px;
+      -ms-flex: 0 1 700px;
+          flex: 0 1 700px;
   margin-top: 80px;
 }
 #block-main-top nav li {
-  margin-left: 100px;
-  font-size: 20px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 222px;
+      -ms-flex: 0 1 222px;
+          flex: 0 1 222px;
+  font-size: 1.25em;
   opacity: 0.7;
   letter-spacing: 0.15px;
   color: white;
@@ -103,8 +121,8 @@ footer {
 }
 /* Телефоны в шапке и в подвале */
 .contact {
-  font-size: 36px;
-  margin: 73px 0 0 100px;
+  font-size: 2.25em;
+  margin-top: 73px;
 }
 .contact::before {
   content: '';
@@ -120,12 +138,12 @@ footer {
   margin-top: 193px;
 }
 #block-main-description h1 {
-  font-size: 48px;
+  font-size: 3em;
   font-weight: 700;
   line-height: 60px;
 }
 #block-main-description h3 {
-  font-size: 30px;
+  font-size: 1.875em;
   line-height: 80px;
   font-weight: 400;
   letter-spacing: 0.75px;
@@ -133,28 +151,8 @@ footer {
 #block-main-description span {
   color: #ffda44;
 }
-#arrow {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
-  margin-bottom: 2%;
-}
-#block-portfolio {
-  height: 750px;
-}
-#block-portfolio ul {
-  margin-top: 20px;
-}
-#block-portfolio a {
-  color: #272727;
-  font-size: 24px;
-  margin: 35px;
-}
-#block-portfolio a.active {
-  color: #ffda44;
-}
-.hidden > div {
-  display: none;
+#block-portfolio ul li a {
+  margin: 20px;
 }
 #block-price {
   height: 1070px;
@@ -177,7 +175,7 @@ footer {
 }
 #block-price li {
   width: 15%;
-  font-size: 24px;
+  font-size: 1.5em;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
@@ -190,13 +188,10 @@ footer {
   padding-right: 5%;
 }
 #block-price ul:last-child > li:first-child {
-  padding-right: 0;
-}
-#block-price h3 {
   height: 80px;
-  font-size: 30px;
+  margin-top: 1.66em;
+  font-size: 1.875em;
   font-family: "Circe-Bold";
-  padding-top: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -229,15 +224,15 @@ form {
 }
 form h1 {
   margin: 80px 0 0 0;
-  font-size: 36px;
+  font-size: 2.25em;
 }
 form p {
   margin: 20px 0 10px 0;
-  font-size: 18px;
+  font-size: 1.25em;
   color: #727272;
 }
 form input {
-  font-size: 24px;
+  font-size: 1.5em;
   color: #272727;
   height: 95px;
   width: 350px;
@@ -266,7 +261,7 @@ form #submit {
   color: white;
   background-color: #ffda44;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 1.875em;
   font-weight: 700;
   border: 1px solid #ffda44;
 }
@@ -276,11 +271,10 @@ form #submit:hover {
 }
 footer {
   padding-top: 100px;
-  font-size: 24px;
 }
 footer #email {
   margin: 35px auto;
-  font-size: 40px;
+  font-size: 2.5em;
   font-weight: bold;
 }
 footer #email::before {
@@ -295,7 +289,7 @@ footer #email::before {
 }
 footer .contact {
   margin: 0 auto;
-  font-size: 40px;
+  font-size: 2.5em;
   font-weight: bold;
 }
 footer .contact::before {
