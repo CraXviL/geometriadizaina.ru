@@ -63,15 +63,15 @@ $(document).ready(() => {
   $('form').submit((e) => {
     e.preventDefault();
     $.ajax({
-        url: 'sendmail.php',
-        type: 'POST',
-        data: $('form').serialize(),
-        success: function () {
-            console.log('Успешно');
-        },
-        error: function () {
-            console.log('возникла ошибка');
-        }
+      url: 'sendmail.php',
+      type: 'POST',
+      data: $('form').serialize(),
+      success: function () {
+          console.log('Запрос отправлен');
+      },
+      error: function () {
+          console.log('Возникла ошибка при отправке');
+      }
     });
     $('form').html('<h2>Заявка отправлена</h2><p>Мы с Вами обязательно свяжемся</p>');
   });

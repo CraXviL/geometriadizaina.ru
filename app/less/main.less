@@ -20,15 +20,25 @@
 }
 
 body {
-	background-color: black;
+	min-width: 700px;
 	font-family: Circe, arial;
+	background: black;
 }
 
 h2 {
-	margin-top: 125px;
-	font-size: 40px;
+	margin: 110px 0 60px 0;
+	font-size: 2.5em;
 	font-weight: 700;
 	text-transform: uppercase;
+}
+
+p {
+	font-size: 24px;
+}
+
+li {
+	font-size: 1.5em;
+
 }
 
 a {
@@ -39,66 +49,87 @@ a {
 ul {
 	padding: 0;
 	margin: 0;
-	display: inline-flex;
+	display: flex;
 	li {list-style: none}
 }
 
-
-#container {
-	width: 1600px;
+.container {
 	margin: 0 auto;
+	max-width: 1600px;
 }
 
-#container>section, footer {
+section, footer {
 	background-color: white;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	transition: all .5s ease;
 }
 
 #block-main {
-	height: 100vh;
-	min-height: 900px;
+	height: 900px;
 	background: url('../img/block-main-bg.png') no-repeat top;
-	background-size: cover;
 	color: #ddddde;
 }
 
 #block-main-top {
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	white-space: nowrap;
+	&>div {
+		box-sizing: border-box;
+		flex-shrink: 1;
+	}
 	#logo {
-		margin: 64px 0 0 160px;
+		flex-basis: 31%;
+		min-width: 350px;
+		margin-top: 64px;
+		padding-left: 10%;
 		font-family: "GillSans-SemiBold";
-		font-size: 24px;
 		letter-spacing: 1.2px;
 		text-align: left;
 		text-transform: uppercase;
+		order: 1;
 	}
+	#logo>p {
+		margin: 1px;
+	}	
 	#logo>img {
 		margin: -13px 10px 0 0;
 		float: left;
-		background: url('../img/logo.png') no-repeat top;
 	}
 	nav {
+	    flex-basis: 35%;
 		margin-top: 80px;
-		li {
-			margin-left: 100px;
-			font-size: 20px;
-			opacity: .7;
-			letter-spacing: 0.15px;
-			color: white;
-			
-		}
-		li:hover {
-			opacity: 1;
+	    order: 2;
+		ul {
+	    	justify-content: space-between;
+			li {
+				flex: 0 1 135px;
+				font-size: 20px;
+				opacity: .7;
+				letter-spacing: 0.15px;
+				color: white;
+			}
+			li:hover {
+				opacity: 1;
+			}
+			li:nth-child(even) {
+				padding-left: 1%;
+			}
 		}
 	}
+	.contact-menu {
+		font-size: 36px;
+		margin-top: 73px;
+		flex-basis: 34%;
+		padding-left: 6%;
+		text-align: left;
+		order: 3;
+	}
 }
-/* Телефоны в шапке и в подвале */
-.contact {
-	font-size: 36px;
-	margin: 73px 0 0 100px;
-}
+
 .contact::before {
 	content: '';
 	margin: 6px 10px 0 0;
@@ -112,12 +143,12 @@ ul {
 #block-main-description {
 	margin-top: 193px;
 	h1 {
-		font-size: 48px;
+		font-size: 3em;
 		font-weight: 700;
 		line-height: 60px;
 	}
 	h3 {
-		font-size: 30px;
+		font-size: 1.875em;
 		line-height: 80px;
 		font-weight: 400;
 		letter-spacing: 0.75px;
@@ -125,25 +156,11 @@ ul {
 	span {color: #ffda44}
 }
 
-#arrow {
-	align-self: center;
-	margin-bottom: 2%;
-}
-
 #block-portfolio {
-	height: 750px;
-	ul {margin-top: 20px}
-	a {
-		color: #272727;
-		font-size: 24px;
-		margin: 35px;
-	}
-	a.active {
-		color: #ffda44
+	ul li a {
+		margin: 20px;
 	}
 }
-
-.hidden>div {display: none}
 
 #block-price {
 	height: 1070px;
@@ -158,7 +175,7 @@ ul {
 	ul:nth-child(odd) {background-color: #e8e8e8}
 	li {
 		width: 15%;
-		font-size: 24px;
+		font-size: 1.5em;
 		align-self: center;
 		box-sizing: border-box;
 	}
@@ -168,13 +185,10 @@ ul {
 		padding-right: 5%;
 	}
 	ul:last-child>li:first-child {
-		padding-right: 0;
-	}
-	h3 {
 		height: 80px;
-		font-size: 30px;
+		margin-top: 50px;
+		font-size: 1.875em;
 		font-family: "Circe-Bold";
-		padding-top: 25px;
 		box-sizing: border-box;
 	}
 	span {
@@ -215,7 +229,6 @@ form {
 		box-sizing: border-box; 
 		border: 3px solid white;
 		border-bottom: 1px solid black;
-		transition: all 1s ease;
 	}
 	input[name="name"] {background: url('../img/avatar.png') no-repeat 20px}
 	input[name="phone"]{background: url('../img/phone-call.png') no-repeat 20px}
@@ -236,7 +249,6 @@ form {
 
 footer {
 	padding-top: 100px;
-	font-size: 24px;
 	#email {
 		margin: 35px auto;
 		font-size: 40px;
@@ -265,5 +277,44 @@ footer {
 		margin-right: 10px;
 		font-family: Font Awesome\ 5 Free;
 	    content: "\f1f9";
+	}
+}
+
+@media screen and (max-width: 1306px) {
+	.contact-menu {
+		order: 1  !important;
+		padding-left: 0 !important
+	}
+	nav {flex-basis: 50% !important}
+	#block-main-description {margin-top: 90px !important}
+}
+
+@media screen and (max-width: 1100px) {
+	html {
+		font-size: 14px;
+	}
+	#logo {
+		padding-left: 5% !important;
+	}
+	nav li {
+		padding: 0 5%;
+	}
+	nav li:nth-child(even) {
+		padding-left: 5% !important;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	#logo {
+		padding-left: 0 !important;
+	}
+	html {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	html {
+		font-size: 10px;
 	}
 }

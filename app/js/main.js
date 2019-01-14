@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  
   $('.owl-carousel').owlCarousel({
     loop: true,
     mouseDrag: true,
@@ -76,17 +77,4 @@ $(document).ready(() => {
     $('form').html('<h2>Заявка отправлена</h2><p>Мы с Вами обязательно свяжемся</p>');
   });
 
-  // $('#block-portfolio > div').click((e) => {
-  //   if (e.target.id === "oldGalleryButton") {
-  //     $('#oldGallery').removeClass('hidden');
-  //     $('#newGallery').addClass('hidden');
-  //     $('#oldGalleryButton').addClass('active');
-  //    $('#newGalleryButton').removeClass('active');
-  //   } else {
-  //     $('#newGallery').removeClass('hidden');
-  //     $('#oldGallery').addClass('hidden');
-  //     $('#newGalleryButton').addClass('active');
-  //     $('#oldGalleryButton').removeClass('active');
-  //   }
-  // })
 });
