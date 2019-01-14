@@ -74,18 +74,14 @@ ul {
 		text-align: left;
 		text-transform: uppercase;
 	}
-	#logo::before {
+	#logo>img {
 		margin: -13px 10px 0 0;
-		content: '';
-		height: 83px;
-		width: 73px;
 		float: left;
 		background: url('../img/logo.png') no-repeat top;
-		background-size: contain;
 	}
 	nav {
 		margin-top: 80px;
-		a {
+		li {
 			margin-left: 100px;
 			font-size: 20px;
 			opacity: .7;
@@ -93,7 +89,7 @@ ul {
 			color: white;
 			
 		}
-		a:hover {
+		li:hover {
 			opacity: 1;
 		}
 	}

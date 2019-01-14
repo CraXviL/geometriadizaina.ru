@@ -16,7 +16,7 @@ gulp.task('less', function(){ // Создаем таск less
         .pipe(less()) // Преобразуем less в CSS посредством gulp-less
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
-        .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+        .pipe(browserSync.reload({stream: true})); // Обновляем CSS на странице при изменении
 });
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
@@ -46,12 +46,12 @@ gulp.task('libs', function() {
     return gulp.src([
         'app/libs/magnific-popup/dist/magnific-popup.css',
         'app/libs/owl.carousel/dist/assets/owl.carousel.min.css',
-        // 'app/libs/font-awesome/web-fonts-with-css/css/fontawesome.min.css',
+        'app/libs/font-awesome/css/fontawesome.min.css',
 		'app/libs/normalize.css/normalize.css'])
 	.pipe(concat('libs.css'))
 	.pipe(cssnano())
 	.pipe(gulp.dest('app/css'));
-})
+});
 
 gulp.task('watch', ['browser-sync', 'less', 'libs', 'scripts'], function() {
     gulp.watch('app/less/**/*.less', ['less']); // Наблюдение за less файлами в папке less
@@ -95,6 +95,6 @@ gulp.task('build', ['img', 'less', 'libs', 'scripts'], function() {
 
 gulp.task('clear', function () {
     return cache.clearAll();
-})
+});
 
 gulp.task('default', ['watch']);
