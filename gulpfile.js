@@ -46,7 +46,7 @@ gulp.task('libs', function() {
     return gulp.src([
         'app/libs/magnific-popup/dist/magnific-popup.css',
         'app/libs/owl.carousel/dist/assets/owl.carousel.min.css',
-        'app/libs/font-awesome/css/fontawesome.min.css',
+        'app/libs/font-awesome/css/all.min.css',
 		'app/libs/normalize.css/normalize.css'])
 	.pipe(concat('libs.css'))
 	.pipe(cssnano())
