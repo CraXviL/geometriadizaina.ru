@@ -1,27 +1,45 @@
 @font-face {
-	font-family: "Circe-Bold";
-    src: url('../fonts/Circe-Bold.ttf');
+	font-family: 'Circe Bold';
+	src: url('../fonts/Circe-Bold.eot');
+	src: url('../fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circe-Bold.woff') format('woff'),
+		url('../fonts/Circe-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-	font-family: "Circe";
-    src: url('../fonts/Circe-Light.ttf');
+	font-family: 'Circe Light';
+	src: url('../fonts/Circe-Light.eot');
+	src: url('../fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circe-Light.woff') format('woff'),
+		url('../fonts/Circe-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-	font-family: "Futura-Book-C";
-	src: url('../fonts/FuturaBookC.ttf');
+	font-family: 'Circe Regular';
+	src: url('../fonts/Circe-Regular.eot');
+	src: url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circe-Regular.woff') format('woff'),
+		url('../fonts/Circe-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-	font-family: "Circe-Regular";
-	src: url('../fonts/Circe-Regular.ttf');
-}
-@font-face {
-	font-family: "GillSans-SemiBold";
-	src: url('../fonts/Gill-Sans.ttf');
+	font-family: 'Gill Sans';
+	src: url('../fonts/Gill-Sans.eot');
+	src: url('../fonts/Gill-Sans.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Gill-Sans.woff') format('woff'),
+    	 url('../fonts/Gill-Sans.woff2') format('woff2'),
+    	 url('../fonts/Gill-Sans.svg') format('svg'),
+		 url('../fonts/Gill-Sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
 	min-width: 700px;
-	font-family: Circe, arial;
+	font-family: 'Circe Light', arial;
 	background: black;
 }
 
@@ -86,7 +104,7 @@ section, footer {
 		min-width: 350px;
 		margin-top: 64px;
 		padding-left: 10%;
-		font-family: "GillSans-SemiBold";
+		font-family: 'Gill Sans', arial;
 		letter-spacing: 1.2px;
 		text-align: left;
 		text-transform: uppercase;
@@ -188,12 +206,12 @@ section, footer {
 		height: 80px;
 		margin-top: 50px;
 		font-size: 1.875em;
-		font-family: "Circe-Bold";
+		font-family: 'Circe Bold';
 		box-sizing: border-box;
 	}
 	span {
 		font-weight: 400;
-		font-family: "Circe-Regular";
+		font-family: 'Circe Regular';
 	}
 	.space {width: 5%}
 	.orange {border-bottom: 5px solid #ffda44}
@@ -230,9 +248,9 @@ form {
 		border: 3px solid white;
 		border-bottom: 1px solid black;
 	}
-	input[name="name"] {background: url('../img/avatar.png') no-repeat 20px}
-	input[name="phone"]{background: url('../img/phone-call.png') no-repeat 20px}
-	input[name="email"] {background: url('../img/envelope.png') no-repeat 20px}
+	input[name='name'] {background: url('../img/avatar.png') no-repeat 20px}
+	input[name='phone']{background: url('../img/phone-call.png') no-repeat 20px}
+	input[name='email'] {background: url('../img/envelope.png') no-repeat 20px}
 	#submit {
 		height: 80px;
 		padding-left: 0;
@@ -276,7 +294,7 @@ footer {
 	p:before {
 		margin-right: 10px;
 		font-family: Font Awesome\ 5 Free;
-	    content: "\f1f9";
+	    content: '\f1f9';
 	}
 }
 
