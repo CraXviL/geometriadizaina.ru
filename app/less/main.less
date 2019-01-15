@@ -44,7 +44,7 @@ body {
 }
 
 h2 {
-	margin: 110px 0 60px 0;
+	margin: 3.5em 0 60px 0;
 	font-size: 2.5em;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -100,25 +100,24 @@ section, footer {
 		flex-shrink: 1;
 	}
 	#logo {
-		flex-basis: 31%;
-		min-width: 350px;
+		flex-basis: 21%;
+		min-width: 250px;
 		margin-top: 64px;
-		padding-left: 10%;
+		margin-left: 10%;
 		font-family: 'Gill Sans', arial;
-		letter-spacing: 1.2px;
 		text-align: left;
 		text-transform: uppercase;
 		order: 1;
-	}
-	#logo>p {
-		margin: 1px;
-	}	
-	#logo>img {
-		margin: -13px 10px 0 0;
-		float: left;
+		p {
+			margin: 1px;
+		}	
+		img {
+			margin: -13px 10px 0 0;
+			float: left;
+		}
 	}
 	nav {
-	    flex-basis: 35%;
+	    flex-basis: 35.5%;
 		margin-top: 80px;
 	    order: 2;
 		ul {
@@ -127,7 +126,8 @@ section, footer {
 				flex: 0 1 135px;
 				font-size: 20px;
 				opacity: .7;
-				letter-spacing: 0.15px;
+				letter-spacing: 0.7px;
+				text-align: right;
 				color: white;
 			}
 			li:hover {
@@ -141,8 +141,8 @@ section, footer {
 	.contact-menu {
 		font-size: 36px;
 		margin-top: 73px;
-		flex-basis: 34%;
-		padding-left: 6%;
+		flex-basis: 27.5%;
+		margin-left: 6%;
 		text-align: left;
 		order: 3;
 	}
@@ -298,12 +298,15 @@ footer {
 	}
 }
 
-@media screen and (max-width: 1306px) {
-	.contact-menu {
-		order: 1  !important;
-		padding-left: 0 !important
+@media screen and (max-width: 1210px) {
+	#logo {
+		margin-left: 2% !important;
 	}
 	nav {flex-basis: 50% !important}
+	.contact-menu {
+		order: 1  !important;
+		margin-left: 0 !important
+	}
 	#block-main-description {margin-top: 90px !important}
 }
 
@@ -311,20 +314,17 @@ footer {
 	html {
 		font-size: 14px;
 	}
-	#logo {
-		padding-left: 5% !important;
-	}
 	nav li {
-		padding: 0 5%;
+		margin: 0 5%;
 	}
 	nav li:nth-child(even) {
-		padding-left: 5% !important;
+		margin-left: 5% !important;
 	}
 }
 
 @media screen and (max-width: 960px) {
 	#logo {
-		padding-left: 0 !important;
+		margin-left: 0 !important;
 	}
 	html {
 		font-size: 12px;

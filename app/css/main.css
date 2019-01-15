@@ -32,7 +32,7 @@ body {
   background: black;
 }
 h2 {
-  margin: 110px 0 60px 0;
+  margin: 3.5em 0 60px 0;
   font-size: 2.5em;
   font-weight: 700;
   text-transform: uppercase;
@@ -106,14 +106,13 @@ footer {
           flex-shrink: 1;
 }
 #block-main-top #logo {
-  -webkit-flex-basis: 31%;
-      -ms-flex-preferred-size: 31%;
-          flex-basis: 31%;
-  min-width: 350px;
+  -webkit-flex-basis: 21%;
+      -ms-flex-preferred-size: 21%;
+          flex-basis: 21%;
+  min-width: 250px;
   margin-top: 64px;
-  padding-left: 10%;
+  margin-left: 10%;
   font-family: 'Gill Sans', arial;
-  letter-spacing: 1.2px;
   text-align: left;
   text-transform: uppercase;
   -webkit-box-ordinal-group: 2;
@@ -121,17 +120,17 @@ footer {
       -ms-flex-order: 1;
           order: 1;
 }
-#block-main-top #logo > p {
+#block-main-top #logo p {
   margin: 1px;
 }
-#block-main-top #logo > img {
+#block-main-top #logo img {
   margin: -13px 10px 0 0;
   float: left;
 }
 #block-main-top nav {
-  -webkit-flex-basis: 35%;
-      -ms-flex-preferred-size: 35%;
-          flex-basis: 35%;
+  -webkit-flex-basis: 35.5%;
+      -ms-flex-preferred-size: 35.5%;
+          flex-basis: 35.5%;
   margin-top: 80px;
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
@@ -151,7 +150,8 @@ footer {
           flex: 0 1 135px;
   font-size: 20px;
   opacity: 0.7;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.7px;
+  text-align: right;
   color: white;
 }
 #block-main-top nav ul li:hover {
@@ -163,10 +163,10 @@ footer {
 #block-main-top .contact-menu {
   font-size: 36px;
   margin-top: 73px;
-  -webkit-flex-basis: 34%;
-      -ms-flex-preferred-size: 34%;
-          flex-basis: 34%;
-  padding-left: 6%;
+  -webkit-flex-basis: 27.5%;
+      -ms-flex-preferred-size: 27.5%;
+          flex-basis: 27.5%;
+  margin-left: 6%;
   text-align: left;
   -webkit-box-ordinal-group: 4;
   -webkit-order: 3;
@@ -348,18 +348,21 @@ footer p:before {
   font-family: Font Awesome\ 5 Free;
   content: '\f1f9';
 }
-@media screen and (max-width: 1306px) {
-  .contact-menu {
-    -webkit-box-ordinal-group: 2  !important;
-    -webkit-order: 1  !important;
-        -ms-flex-order: 1  !important;
-            order: 1  !important;
-    padding-left: 0 !important;
+@media screen and (max-width: 1210px) {
+  #logo {
+    margin-left: 2% !important;
   }
   nav {
     -webkit-flex-basis: 50% !important;
         -ms-flex-preferred-size: 50% !important;
             flex-basis: 50% !important;
+  }
+  .contact-menu {
+    -webkit-box-ordinal-group: 2  !important;
+    -webkit-order: 1  !important;
+        -ms-flex-order: 1  !important;
+            order: 1  !important;
+    margin-left: 0 !important;
   }
   #block-main-description {
     margin-top: 90px !important;
@@ -369,19 +372,16 @@ footer p:before {
   html {
     font-size: 14px;
   }
-  #logo {
-    padding-left: 5% !important;
-  }
   nav li {
-    padding: 0 5%;
+    margin: 0 5%;
   }
   nav li:nth-child(even) {
-    padding-left: 5% !important;
+    margin-left: 5% !important;
   }
 }
 @media screen and (max-width: 960px) {
   #logo {
-    padding-left: 0 !important;
+    margin-left: 0 !important;
   }
   html {
     font-size: 12px;
