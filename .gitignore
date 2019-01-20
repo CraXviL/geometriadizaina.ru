@@ -1,4 +1,4 @@
-исходники/
+!source
 app/libs/
 .DS_Store
 node_modules/
