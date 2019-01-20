@@ -76,19 +76,19 @@ gulp.task('img', function() {
 
 gulp.task('build', ['img', 'less', 'libs', 'scripts'], function() {
 
-    var buildCss = gulp.src([ // Переносим библиотеки в продакшен
+    gulp.src([ // Переносим библиотеки в продакшен
         'app/css/main.css',
         'app/css/libs.css'
         ])
     .pipe(gulp.dest('dist/css'));
 
-    var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
+    gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
     .pipe(gulp.dest('dist/fonts'));
 
-    var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+    gulp.src('app/js/**/*') // Переносим скрипты в продакшен
     .pipe(gulp.dest('dist/js'));
 
-    var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
+    gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
 
 });
