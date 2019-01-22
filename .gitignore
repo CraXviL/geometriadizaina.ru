@@ -1,5 +1,6 @@
 SOURCE/
 app/libs/
+app/css/
 .DS_Store
 node_modules/
 npm-debug.log
