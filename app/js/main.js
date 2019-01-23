@@ -89,13 +89,15 @@ $(document).ready(() => {
       type: 'POST',
       data: $('form').serialize(),
       success: function () {
-          console.log('Запрос отправлен');
+        console.log('Запрос отправлен');
       },
       error: function () {
-          console.log('Возникла ошибка при отправке');
+        console.log('Возникла ошибка при отправке');
       }
     });
+    $('form').fadeOut();
     $('form').html('<h2>Заявка отправлена</h2><p>Мы с Вами обязательно свяжемся</p>');
+    $('form').fadeIn();
   });
 
 });

@@ -64,27 +64,23 @@ $(document).ready(function () {
     window.location = '#block-order';
   });
 
-  $('input[type="name"]').on('input', function (e) {
-    if (/a-zA-Z/.test(e.target.value.trim())) {
-      $('input[type="tel"]').css({ border: '3px solid red' });
-    } else {
-      $('input[type="tel"]').css({ border: '3px solid white', 'border-bottom': '1px solid black' });
-    }
+  $('input[name="name"]').on('input', function (e) {
+    validate(e, /^[ а-яё]+$/gi);
   });
-  $('input[type="tel"]').on('input', function (e) {
-    if (!/^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d- ]{7,10}$/.test(e.target.value.trim())) {
-      $('input[type="tel"]').css({ border: '3px solid red' });
-    } else {
-      $('input[type="tel"]').css({ border: '3px solid white', 'border-bottom': '1px solid black' });
-    }
+  $('input[name="phone"]').on('input', function (e) {
+    validate(e, /^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d- ]{7,10}$/);
   });
-  $('input[type="email"]').on('input', function (e) {
-    if (!/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(e.target.value.trim())) {
-      $('input[type="email"]').css('border', '3px solid red');
-    } else {
-      $('input[type="email"]').css({ border: '3px solid white', 'border-bottom': '1px solid black' });
-    }
+  $('input[name="email"]').on('input', function (e) {
+    validate(e, /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/);
   });
+
+  function validate(e, regExp) {
+    if (!regExp.test(e.target.value.trim())) {
+      $(e.target).addClass('error');
+    } else {
+      $(e.target).removeClass('error');
+    }
+  }
 
   $('form').submit(function (e) {
     e.preventDefault();
@@ -99,6 +95,8 @@ $(document).ready(function () {
         console.log('Возникла ошибка при отправке');
       }
     });
+    $('form').fadeOut();
     $('form').html('<h2>Заявка отправлена</h2><p>Мы с Вами обязательно свяжемся</p>');
+    $('form').fadeIn();
   });
 });
