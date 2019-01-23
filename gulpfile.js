@@ -1,6 +1,8 @@
-var gulp       = require('gulp'), // Подключаем Gulp
+var gulp         = require('gulp'), // Подключаем Gulp
     less         = require('gulp-less'), //Подключаем less пакет,
     browserSync  = require('browser-sync'), // Подключаем Browser Sync
+    babel        = require('gulp-babel');
+    sourcemaps   = require('gulp-sourcemaps');
     concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
     uglify       = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
     cssnano      = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
@@ -86,6 +88,12 @@ gulp.task('build', ['img', 'less', 'libs', 'scripts'], function() {
     .pipe(gulp.dest('dist/fonts'));
 
     gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+    .pipe(babel({
+        presets: [
+            ["env", { "modules": false }]
+          ]
+    }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js'));
 
     gulp.src('app/*.html') // Переносим HTML в продакшен

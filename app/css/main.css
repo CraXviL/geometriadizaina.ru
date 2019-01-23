@@ -288,6 +288,9 @@ form input {
   padding-left: 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   border: 3px solid white;
   border-bottom: 1px solid black;
 }
@@ -299,6 +302,9 @@ form input[name='phone'] {
 }
 form input[name='email'] {
   background: url('../img/envelope.png') no-repeat 20px;
+}
+form input.error {
+  border: 3px solid #ff0000;
 }
 form #submit {
   height: 80px;
